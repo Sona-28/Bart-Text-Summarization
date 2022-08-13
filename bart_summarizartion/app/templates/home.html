@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="input-text"><strong>Enter your text to summarize:</strong></label><br><br>
+        <textarea type="text" name="input-text" id="input-text" cols="35" rows="15" placeholder="Enter your text to summarize"></textarea><br><br>
+        <button type="submit">Summarize</button>
+    </form>
+    <div>
+        <p>Summarized Content:</p>
+        <p id="answer">{{output}}</p>
+    </div>
+</body>
+
+</html>
